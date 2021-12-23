@@ -15,9 +15,6 @@ spring:
         cluster-name: HZ
 #      discovery:
 #        cluster-name: HZ
-#mybatis:
-#  configuration:
-#    map-underscore-to-camel-case: true
 mybatis-plus:
   global-config:
     dbConfig:
