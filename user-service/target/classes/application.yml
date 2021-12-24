@@ -1,8 +1,6 @@
 server:
   port: 8081
 spring:
-  application:
-    name: userservice
   datasource:
     url: jdbc:mysql://localhost:3306/cloud_user?useSSL=false&timeZone=utc
     username: root

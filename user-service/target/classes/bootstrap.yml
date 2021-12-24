@@ -7,7 +7,7 @@ spring:
     nacos:
       discovery:
         service: userservice
-      server-addr: localhost:8848
+      server-addr: localhost:80
       config:
         file-extension: yaml
 #        namespace: 33a20698-41c9-402f-83de-f8b99e0e0915
