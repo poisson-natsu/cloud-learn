@@ -36,3 +36,13 @@ logging:
 #userservice:
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#feign:
+#  client:
+#    config:
+#      default:
+#        loggerLevel: FULL
+#feign:
+#  client:
+#    config:
+#      userservice:
+#        loggerLevel: FULL
