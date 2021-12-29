@@ -46,3 +46,10 @@ logging:
 #    config:
 #      userservice:
 #        loggerLevel: FULL
+
+# feign优化，URLConnection不支持连接池，换成httpclient或者okhttp，支持连接池
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50

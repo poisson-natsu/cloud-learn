@@ -1,13 +1,11 @@
 package com.ouest.order.service;
 
-import com.ouest.order.clients.UserClient;
+import com.ouest.feign.clients.UserClient;
+import com.ouest.feign.pojo.User;
 import com.ouest.order.mapper.OrderMapper;
 import com.ouest.order.pojo.Order;
-import com.ouest.order.pojo.User;
-import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 public class OrderService {

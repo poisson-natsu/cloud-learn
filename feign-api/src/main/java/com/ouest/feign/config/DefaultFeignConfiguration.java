@@ -1,8 +1,7 @@
-package com.ouest.order.config;
+package com.ouest.feign.config;
 
 import feign.Logger;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 public class DefaultFeignConfiguration {
 

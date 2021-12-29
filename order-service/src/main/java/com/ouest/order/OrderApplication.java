@@ -2,7 +2,8 @@ package com.ouest.order;
 
 //import com.netflix.loadbalancer.IRule;
 //import com.netflix.loadbalancer.RandomRule;
-import com.ouest.order.config.DefaultFeignConfiguration;
+import com.ouest.feign.clients.UserClient;
+import com.ouest.feign.config.DefaultFeignConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,7 +14,9 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @MapperScan("com.ouest.order.mapper")
-@EnableFeignClients(defaultConfiguration = DefaultFeignConfiguration.class)
+// clients指定，解决扫描不到外部包，导致注入失败的问题
+// basepackage也可以，指定客户端所在包，包下所有客户端都可以用了，，
+@EnableFeignClients(clients = UserClient.class, defaultConfiguration = DefaultFeignConfiguration.class)
 //@EnableFeignClients
 public class OrderApplication {
     public static void main(String[] args) {

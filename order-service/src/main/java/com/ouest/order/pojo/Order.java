@@ -1,6 +1,7 @@
 package com.ouest.order.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.ouest.feign.pojo.User;
 import lombok.Data;
 
 @Data
