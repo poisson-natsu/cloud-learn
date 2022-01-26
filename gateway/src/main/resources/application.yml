@@ -1,0 +1,31 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      server-addr: localhost:80
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启从注册中心动态创建路由的功能，利用微服务名进行路由
+          lower-case-service-id: true
+      routes:
+        - id: user-service
+#          uri: http://localhost:8081
+          uri: lb://userservice
+          predicates:
+            - Path=/user/**
+        - id: order-service
+          uri: lb://orderservice
+          predicates:
+            - Path=/order/**
+logging:
+  level:
+    com.ouest: trace
+#feign:
+#  client:
+#    config:
+#      gateway:
+#        loggerLevel: FULL

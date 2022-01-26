@@ -15,12 +15,12 @@ import java.time.format.DateTimeFormatter;
 @RefreshScope
 public class TestController {
 
-    @Value("${dateformataa}")
-    private String dateformat;
-
-    @GetMapping("now")
-    public String now() {
-        System.out.println("------------------:"+dateformat+"|over");
-        return LocalDateTime.now().format(DateTimeFormatter.ofPattern(dateformat));
-    }
+//    @Value("${dateformataa}")
+//    private String dateformat;
+//
+//    @GetMapping("now")
+//    public String now() {
+//        System.out.println("------------------:"+dateformat+"|over");
+//        return LocalDateTime.now().format(DateTimeFormatter.ofPattern(dateformat));
+//    }
 }

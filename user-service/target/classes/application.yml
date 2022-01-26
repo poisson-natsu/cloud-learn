@@ -13,7 +13,7 @@ mybatis-plus:
   type-aliases-package: com.ouest.user.pojo
 logging:
   level:
-    com.ouest: info
+    com.ouest: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
 
